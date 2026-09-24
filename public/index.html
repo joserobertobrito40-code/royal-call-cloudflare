@@ -1,103 +1,101 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Sala de Inglês com Roberto</title>
 <style>
-:root{--navy:#071d49;--blue:#123a75;--gold:#d8b562;--bg:#eef3f9;--ink:#172033;--muted:#6b7280;--ok:#166534;--warn:#92400e;--danger:#991b1b}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#edf3fb,#f8fafc);color:var(--ink)}
-.wrap{max-width:1180px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.brand{font-weight:950;color:var(--navy);letter-spacing:.02em}.badge{font-size:12px;background:#e6edf7;border-radius:999px;padding:7px 10px;color:#35507a}.grid{display:grid;grid-template-columns:1.5fr .7fr;gap:14px}.card{background:#fff;border:1px solid #dfe6ef;border-radius:20px;padding:16px;box-shadow:0 12px 35px #18345b12}.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.video-box{position:relative;background:#061127;border-radius:16px;overflow:hidden;min-height:260px;aspect-ratio:16/10}.video-box video{width:100%;height:100%;object-fit:cover;background:#061127}.label{position:absolute;left:10px;bottom:10px;background:#0009;color:#fff;padding:6px 9px;border-radius:999px;font-size:12px}.status{padding:10px 12px;border-radius:12px;background:#eef2ff;margin:12px 0;font-size:14px}.status.ok{background:#ecfdf5;color:var(--ok)}.status.warn{background:#fff7ed;color:var(--warn)}.status.bad{background:#fff1f2;color:var(--danger)}.row{display:flex;gap:8px;flex-wrap:wrap}.row button{flex:1;min-width:140px}button{border:0;border-radius:12px;padding:12px 14px;font-weight:850;cursor:pointer;background:var(--navy);color:#fff}button.gold{background:var(--gold);color:#16264d}button.ghost{background:#eaf0f7;color:#213b63}button.danger{background:#b42318}button:disabled{opacity:.5;cursor:not-allowed}input{width:100%;padding:12px;border:1px solid #cfd8e6;border-radius:12px;font:inherit}.muted{color:var(--muted);font-size:13px;line-height:1.5}.waiting{padding:12px;border:1px dashed #d7b55f;border-radius:14px;background:#fffaf0;margin-top:10px}.lesson{min-height:250px;background:#f8fafc;border-radius:14px;padding:14px}.lesson h3{margin-top:0}.chat{height:230px;overflow:auto;background:#f8fafc;border-radius:14px;padding:10px;margin-bottom:8px}.msg{padding:8px 10px;margin:6px 0;border-radius:11px;background:#fff;border:1px solid #e5e7eb}.hide{display:none!important}@media(max-width:800px){.grid{grid-template-columns:1fr}.video-grid{grid-template-columns:1fr}.video-box{min-height:220px}.wrap{padding:10px}}
+:root{--navy:#08224f;--blue:#1e4f92;--gold:#d8b15b;--bg:#edf3fa;--ink:#172033;--muted:#667085;--line:#dfe6ef;--ok:#166534;--warn:#92400e;--danger:#b42318}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#edf3fa,#f8fafc);color:var(--ink)}
+.wrap{max-width:1500px;margin:auto;padding:14px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.brand{font-weight:950;color:var(--navy);font-size:1.15rem}.badge{font-size:12px;background:#e6edf7;border-radius:999px;padding:7px 10px;color:#35507a}
+.workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 12px 35px #18345b12}.card h2,.card h3{margin-top:0}.muted{color:var(--muted);font-size:13px;line-height:1.45}
+.status{padding:10px 12px;border-radius:12px;background:#eef2ff;margin:10px 0;font-size:14px}.status.ok{background:#ecfdf5;color:var(--ok)}.status.warn{background:#fff7ed;color:var(--warn)}.status.bad{background:#fff1f2;color:#991b1b}
+.video-stage{position:relative;background:#061127;border-radius:16px;overflow:hidden;min-height:440px;display:grid;grid-template-columns:1fr 1fr;gap:2px}.video-box{position:relative;background:#061127;min-width:0}.video-box video{width:100%;height:100%;object-fit:cover;display:block;background:#061127}.label{position:absolute;left:10px;bottom:10px;background:#0009;color:#fff;padding:6px 9px;border-radius:999px;font-size:12px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.toolbar button{flex:1 1 150px}.toolbar .wide{flex:2 1 220px}button{border:0;border-radius:12px;padding:11px 13px;font-weight:850;cursor:pointer;background:var(--navy);color:#fff}button.gold{background:var(--gold);color:#17233e}button.ghost{background:#eaf0f7;color:#213b63}button.danger{background:var(--danger)}button:disabled{opacity:.5;cursor:not-allowed}
+.lesson-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}.lesson-tools button{padding:8px 10px;font-size:12px}.lesson{width:100%;min-height:300px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:14px;font:inherit;line-height:1.55;background:#fbfcfe;color:var(--ink);outline:none}.lesson:focus{border-color:#8ca9d0;box-shadow:0 0 0 3px #dbeafe}
+.chat{height:230px;overflow:auto;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:8px}.msg{padding:8px 10px;margin:6px 0;border-radius:11px;background:#fff;border:1px solid #e5e7eb}.msg b{font-size:12px;color:#43516a}.chat-row{display:flex;gap:8px}.chat-row input{flex:1}.waiting{padding:12px;border:1px dashed #d7b55f;border-radius:14px;background:#fffaf0;margin-top:10px}.hide{display:none!important}input{width:100%;padding:11px;border:1px solid #cfd8e6;border-radius:12px;font:inherit}
+.expand-mode .workspace{grid-template-columns:1fr}.expand-mode .side{display:none}.expand-mode .video-stage{min-height:70vh}.video-stage:fullscreen{width:100vw;height:100vh;border-radius:0}.video-stage:fullscreen .video-box{height:100vh}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#eef4fb;color:#365a88;font-size:12px;font-weight:700}.section-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
+@media(max-width:900px){.workspace{grid-template-columns:1fr}.video-stage{min-height:300px;grid-template-columns:1fr}.side{order:2}.wrap{padding:8px}.lesson{min-height:220px}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="appWrap">
   <div class="top"><div class="brand">SALA DE INGLÊS COM ROBERTO</div><div class="badge">1 professor + 1 aluno</div></div>
-  <div class="grid">
-    <section class="card">
-      <h2 style="margin-top:0">Aula ao vivo</h2>
-      <div class="muted">Câmera e microfone próprios do app, com conexão WebRTC e Cloudflare TURN.</div>
-      <div id="joinPanel" style="margin-top:14px">
-        <div id="teacherStart">
-          <button id="createRoom" class="gold">Criar sala de aula</button>
-        </div>
-        <div id="studentStart" class="hide">
-          <button id="joinRoom" class="gold">Entrar na sala</button>
-        </div>
-      </div>
+  <div class="workspace">
+    <section class="card main">
+      <div class="section-head"><div><h2 style="margin-bottom:4px">Aula ao vivo</h2><div class="muted">Vídeo, áudio, tela cheia, compartilhamento de tela e controles da aula.</div></div><span class="pill" id="rolePill">Preparando...</span></div>
+      <div id="joinPanel"><div id="teacherStart"><button id="createRoom" class="gold">Criar sala de aula</button></div><div id="studentStart" class="hide"><button id="joinRoom" class="gold">Entrar na sala</button></div></div>
       <div id="roomPanel" class="hide">
         <div id="status" class="status">Preparando...</div>
-        <div class="video-grid">
+        <div class="video-stage" id="videoStage">
           <div class="video-box"><video id="localVideo" autoplay muted playsinline></video><div class="label">Você</div></div>
           <div class="video-box"><video id="remoteVideo" autoplay playsinline></video><div class="label" id="remoteLabel">Outra pessoa</div></div>
         </div>
-        <div class="row" style="margin-top:12px">
+        <div class="toolbar">
           <button id="toggleMic" class="ghost">🎤 Microfone ligado</button>
           <button id="toggleCam" class="ghost">📷 Câmera ligada</button>
+          <button id="shareScreen" class="ghost">🖥️ Compartilhar tela</button>
+          <button id="fullscreen" class="ghost">⛶ Tela cheia</button>
+          <button id="expand" class="ghost">↔ Expandir área</button>
           <button id="hangup" class="danger">Encerrar</button>
         </div>
-        <div id="inviteBox" class="hide" style="margin-top:14px">
-          <label><strong>Link do aluno</strong></label>
-          <input id="inviteLink" readonly>
-          <button id="copyLink" class="ghost" style="margin-top:8px;width:100%">Copiar link</button>
-        </div>
-        <div id="approvalBox" class="waiting hide">
-          <strong>Aluno aguardando aprovação</strong>
-          <div class="muted">Clique em permitir para iniciar a chamada.</div>
-          <div class="row"><button id="approve" class="gold">Permitir entrada</button><button id="reject" class="ghost">Recusar</button></div>
-        </div>
+        <div id="inviteBox" class="hide" style="margin-top:12px"><strong>Link do aluno</strong><input id="inviteLink" readonly style="margin-top:6px"><button id="copyLink" class="ghost" style="margin-top:8px;width:100%">Copiar link</button></div>
+        <div id="approvalBox" class="waiting hide"><strong>Aluno aguardando aprovação</strong><div class="muted">Clique em permitir para iniciar a chamada.</div><div class="toolbar"><button id="approve" class="gold">Permitir entrada</button><button id="reject" class="ghost">Recusar</button></div></div>
       </div>
     </section>
 
-    <aside class="card">
-      <h3 style="margin-top:0">Lição compartilhada</h3>
-      <div class="lesson" contenteditable="true">Escreva aqui a atividade, frases, perguntas ou vocabulário da aula.</div>
-      <h3>Comentários</h3>
+    <aside class="card side">
+      <div class="section-head"><h3 style="margin:0">Lição compartilhada</h3><span class="pill" id="saveState">Sincronizada</span></div>
+      <div class="lesson-tools"><button id="clearLesson" class="ghost">Limpar</button><button id="insertExercise" class="ghost">+ Exercício</button><button id="insertHomework" class="ghost">+ Homework</button></div>
+      <textarea id="lesson" class="lesson" placeholder="Digite aqui a lição, frases, perguntas, vocabulário ou exercícios. O texto aparece nos dois aparelhos em tempo real."></textarea>
+      <h3 style="margin-top:16px">Comentários</h3>
       <div id="chat" class="chat"></div>
-      <div class="row"><input id="chatInput" placeholder="Escreva um comentário..."><button id="sendChat">Enviar</button></div>
+      <div class="chat-row"><input id="chatInput" placeholder="Escreva um comentário..."><button id="sendChat">Enviar</button></div>
     </aside>
   </div>
 </div>
 <script>
-const $=id=>document.getElementById(id);
-const params=new URLSearchParams(location.search);
-let room=params.get('sala');
-let host=params.get('host');
-let role=host?'teacher':'student';
-let ws,pc,localStream,pendingStudentId=null,iceServers=[];
-
+const $=id=>document.getElementById(id), params=new URLSearchParams(location.search);
+let room=params.get('sala'), host=params.get('host'), role=host?'teacher':'student';
+let ws,pc,localStream,pendingStudentId=null,iceServers=[],screenTrack=null,lessonTimer=null;
+const rolePill=$('rolePill'); rolePill.textContent=role==='teacher'?'Professor':'Aluno';
 function setStatus(text,kind=''){const s=$('status');s.textContent=text;s.className='status '+kind}
 function randomHex(bytes=16){const a=new Uint8Array(bytes);crypto.getRandomValues(a);return [...a].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function wsUrl(){const u=new URL('/api/ws',location.href);u.protocol=location.protocol==='https:'?'wss:':'ws:';u.searchParams.set('room',room);u.searchParams.set('role',role);if(host)u.searchParams.set('host',host);return u.toString()}
 async function getTurn(){const r=await fetch('/api/turn',{cache:'no-store'});if(!r.ok)throw new Error('TURN '+r.status);const d=await r.json();iceServers=d.iceServers||d;if(!Array.isArray(iceServers))throw new Error('Resposta TURN inválida')}
 async function getMedia(){if(localStream)return localStream;localStream=await navigator.mediaDevices.getUserMedia({video:{width:{ideal:1280},height:{ideal:720}},audio:{echoCancellation:true,noiseSuppression:true}});$('localVideo').srcObject=localStream;return localStream}
 async function makePeer(){if(pc)pc.close();pc=new RTCPeerConnection({iceServers});const stream=await getMedia();for(const t of stream.getTracks())pc.addTrack(t,stream);pc.ontrack=e=>{$('remoteVideo').srcObject=e.streams[0];setStatus('Conectado. Aula ao vivo em andamento.','ok')};pc.onicecandidate=e=>{if(e.candidate)sendSignal({candidate:e.candidate})};pc.onconnectionstatechange=()=>{if(pc.connectionState==='failed')setStatus('A conexão falhou. Tentando pelo TURN...','warn');if(pc.connectionState==='disconnected')setStatus('Conexão interrompida temporariamente.','warn')};return pc}
-function send(obj){if(ws?.readyState===1)ws.send(JSON.stringify(obj))}
-function sendSignal(data){send({type:'signal',data})}
+function send(obj){if(ws?.readyState===1)ws.send(JSON.stringify(obj))} function sendSignal(data){send({type:'signal',data})}
 async function startOffer(){await makePeer();const offer=await pc.createOffer();await pc.setLocalDescription(offer);sendSignal({description:pc.localDescription})}
 async function handleSignal(data){if(data.description){if(!pc)await makePeer();await pc.setRemoteDescription(data.description);if(data.description.type==='offer'){const answer=await pc.createAnswer();await pc.setLocalDescription(answer);sendSignal({description:pc.localDescription})}}else if(data.candidate){if(!pc)await makePeer();try{await pc.addIceCandidate(data.candidate)}catch(e){console.warn(e)}}}
+function addChat(text,who){const d=document.createElement('div');d.className='msg';d.innerHTML=`<b>${who}</b><div></div>`;d.querySelector('div').textContent=text;$('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight}
 function connectSocket(){return new Promise((resolve,reject)=>{ws=new WebSocket(wsUrl());ws.onopen=resolve;ws.onerror=reject;ws.onmessage=async e=>{let m;try{m=JSON.parse(e.data)}catch{return}
-  if(m.type==='student-waiting'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.remove('hide');setStatus('Aluno solicitou entrada.','warn')}
-  if(m.type==='approved'&&role==='student'){setStatus('Entrada autorizada. Conectando...','ok')}
-  if(m.type==='approved-confirmed'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.add('hide');setStatus('Aluno aprovado. Iniciando vídeo...','ok');await startOffer()}
-  if(m.type==='signal')await handleSignal(m.data);
-  if(m.type==='waiting-teacher')setStatus('Aguardando o professor entrar na sala...','warn');
-  if(m.type==='rejected')setStatus('Entrada não autorizada.','bad');
-  if(m.type==='teacher-left')setStatus('O professor saiu da sala.','warn');
-  if(m.type==='student-left')setStatus('O aluno saiu da sala.','warn');
-  if(m.type==='error')setStatus(m.message||'Erro na sala.','bad');
+ if(m.type==='student-waiting'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.remove('hide');setStatus('Aluno solicitou entrada.','warn')}
+ if(m.type==='approved'&&role==='student')setStatus('Entrada autorizada. Conectando...','ok');
+ if(m.type==='approved-confirmed'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.add('hide');setStatus('Aluno aprovado. Iniciando vídeo...','ok');await startOffer()}
+ if(m.type==='signal')await handleSignal(m.data);
+ if(m.type==='waiting-teacher')setStatus('Aguardando o professor entrar na sala...','warn');
+ if(m.type==='rejected')setStatus('Entrada não autorizada.','bad');
+ if(m.type==='teacher-left')setStatus('O professor saiu da sala.','warn');
+ if(m.type==='student-left')setStatus('O aluno saiu da sala.','warn');
+ if(m.type==='lesson-state'||m.type==='lesson-update'){if(document.activeElement!==$('lesson'))$('lesson').value=m.text||'';$('saveState').textContent='Sincronizada'}
+ if(m.type==='chat')addChat(m.text,m.role==='teacher'?'Professor':'Aluno');
+ if(m.type==='error')setStatus(m.message||'Erro na sala.','bad');
 }})}
 async function enter(){try{$('joinPanel').classList.add('hide');$('roomPanel').classList.remove('hide');setStatus('Solicitando câmera e microfone...');await getMedia();setStatus('Obtendo conexão segura...');await getTurn();setStatus('Entrando na sala...');await connectSocket();if(role==='teacher'){const studentUrl=new URL(location.href);studentUrl.search='';studentUrl.searchParams.set('sala',room);$('inviteLink').value=studentUrl.toString();$('inviteBox').classList.remove('hide');$('remoteLabel').textContent='Aluno';setStatus('Sala pronta. Envie o link ao aluno.','ok')}else{$('remoteLabel').textContent='Professor';setStatus('Aguardando aprovação do professor...','warn')}}catch(e){console.error(e);setStatus('Não foi possível iniciar: '+e.message,'bad')}}
-$('createRoom').onclick=()=>{room=randomHex(16);host=randomHex(24);role='teacher';const u=new URL(location.href);u.search='';u.searchParams.set('sala',room);u.searchParams.set('host',host);history.replaceState({},'',u);enter()};
-$('joinRoom').onclick=enter;
-$('approve').onclick=()=>{if(pendingStudentId)send({type:'approve',studentId:pendingStudentId})};
-$('reject').onclick=()=>{if(pendingStudentId)send({type:'reject',studentId:pendingStudentId});$('approvalBox').classList.add('hide')};
+$('createRoom').onclick=()=>{room=randomHex(16);host=randomHex(24);role='teacher';rolePill.textContent='Professor';const u=new URL(location.href);u.search='';u.searchParams.set('sala',room);u.searchParams.set('host',host);history.replaceState({},'',u);enter()};
+$('joinRoom').onclick=enter;$('approve').onclick=()=>pendingStudentId&&send({type:'approve',studentId:pendingStudentId});$('reject').onclick=()=>{if(pendingStudentId)send({type:'reject',studentId:pendingStudentId});$('approvalBox').classList.add('hide')};
 $('toggleMic').onclick=()=>{const t=localStream?.getAudioTracks()[0];if(!t)return;t.enabled=!t.enabled;$('toggleMic').textContent=t.enabled?'🎤 Microfone ligado':'🔇 Microfone desligado'};
 $('toggleCam').onclick=()=>{const t=localStream?.getVideoTracks()[0];if(!t)return;t.enabled=!t.enabled;$('toggleCam').textContent=t.enabled?'📷 Câmera ligada':'🚫 Câmera desligada'};
+$('fullscreen').onclick=async()=>{const el=$('videoStage');if(!document.fullscreenElement)await el.requestFullscreen();else await document.exitFullscreen()};
+$('expand').onclick=()=>{document.body.classList.toggle('expand-mode');$('expand').textContent=document.body.classList.contains('expand-mode')?'↩ Mostrar lição':'↔ Expandir área'};
+$('shareScreen').onclick=async()=>{try{if(screenTrack){screenTrack.stop();return}const ds=await navigator.mediaDevices.getDisplayMedia({video:true});screenTrack=ds.getVideoTracks()[0];const sender=pc?.getSenders().find(s=>s.track?.kind==='video');if(sender)await sender.replaceTrack(screenTrack);$('localVideo').srcObject=ds;$('shareScreen').textContent='🛑 Parar compartilhamento';screenTrack.onended=async()=>{const cam=localStream?.getVideoTracks()[0];const s=pc?.getSenders().find(x=>x.track?.kind==='video');if(s&&cam)await s.replaceTrack(cam);$('localVideo').srcObject=localStream;screenTrack=null;$('shareScreen').textContent='🖥️ Compartilhar tela'}}catch(e){console.warn(e)}};
 $('hangup').onclick=()=>{pc?.close();ws?.close();localStream?.getTracks().forEach(t=>t.stop());location.href=location.pathname};
 $('copyLink').onclick=async()=>{await navigator.clipboard.writeText($('inviteLink').value);$('copyLink').textContent='Copiado!';setTimeout(()=>$('copyLink').textContent='Copiar link',1200)};
-$('sendChat').onclick=()=>{const v=$('chatInput').value.trim();if(!v)return;const d=document.createElement('div');d.className='msg';d.textContent=v;$('chat').appendChild(d);$('chatInput').value=''};
+$('lesson').addEventListener('input',()=>{clearTimeout(lessonTimer);$('saveState').textContent='Salvando...';lessonTimer=setTimeout(()=>{send({type:'lesson-update',text:$('lesson').value});$('saveState').textContent='Sincronizada'},250)});
+$('clearLesson').onclick=()=>{$('lesson').value='';send({type:'lesson-update',text:''})};
+$('insertExercise').onclick=()=>{const t='\n\nEXERCISE\n1. \n2. \n3. ';$('lesson').value+=t;send({type:'lesson-update',text:$('lesson').value});$('lesson').focus()};
+$('insertHomework').onclick=()=>{const t='\n\nHOMEWORK\n• ';$('lesson').value+=t;send({type:'lesson-update',text:$('lesson').value});$('lesson').focus()};
+function sendChat(){const v=$('chatInput').value.trim();if(!v)return;send({type:'chat',text:v});$('chatInput').value=''}$('sendChat').onclick=sendChat;$('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
 if(room&&!host){$('teacherStart').classList.add('hide');$('studentStart').classList.remove('hide')}else if(room&&host){$('teacherStart').classList.add('hide');$('studentStart').classList.add('hide');enter()}
 </script>
-</body>
-</html>
