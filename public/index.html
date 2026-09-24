@@ -7,15 +7,16 @@
 :root{--navy:#08224f;--blue:#1e4f92;--gold:#d8b15b;--bg:#edf3fa;--ink:#172033;--muted:#667085;--line:#dfe6ef;--ok:#166534;--warn:#92400e;--danger:#b42318}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:linear-gradient(135deg,#edf3fa,#f8fafc);color:var(--ink)}
 .wrap{max-width:1500px;margin:auto;padding:14px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.brand{font-weight:950;color:var(--navy);font-size:1.15rem}.badge{font-size:12px;background:#e6edf7;border-radius:999px;padding:7px 10px;color:#35507a}
-.workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(320px,.55fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 12px 35px #18345b12}.card h2,.card h3{margin-top:0}.muted{color:var(--muted);font-size:13px;line-height:1.45}
+.workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(340px,.55fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 12px 35px #18345b12}.card h2,.card h3{margin-top:0}.muted{color:var(--muted);font-size:13px;line-height:1.45}
 .status{padding:10px 12px;border-radius:12px;background:#eef2ff;margin:10px 0;font-size:14px}.status.ok{background:#ecfdf5;color:var(--ok)}.status.warn{background:#fff7ed;color:var(--warn)}.status.bad{background:#fff1f2;color:#991b1b}
 .video-stage{position:relative;background:#061127;border-radius:16px;overflow:hidden;min-height:440px;display:grid;grid-template-columns:1fr 1fr;gap:2px}.video-box{position:relative;background:#061127;min-width:0}.video-box video{width:100%;height:100%;object-fit:cover;display:block;background:#061127}.label{position:absolute;left:10px;bottom:10px;background:#0009;color:#fff;padding:6px 9px;border-radius:999px;font-size:12px}
-.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.toolbar button{flex:1 1 150px}.toolbar .wide{flex:2 1 220px}button{border:0;border-radius:12px;padding:11px 13px;font-weight:850;cursor:pointer;background:var(--navy);color:#fff}button.gold{background:var(--gold);color:#17233e}button.ghost{background:#eaf0f7;color:#213b63}button.danger{background:var(--danger)}button:disabled{opacity:.5;cursor:not-allowed}
-.lesson-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}.lesson-tools button{padding:8px 10px;font-size:12px}.lesson{width:100%;min-height:300px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:14px;font:inherit;line-height:1.55;background:#fbfcfe;color:var(--ink);outline:none}.lesson:focus{border-color:#8ca9d0;box-shadow:0 0 0 3px #dbeafe}
-.chat{height:230px;overflow:auto;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:8px}.msg{padding:8px 10px;margin:6px 0;border-radius:11px;background:#fff;border:1px solid #e5e7eb}.msg b{font-size:12px;color:#43516a}.chat-row{display:flex;gap:8px}.chat-row input{flex:1}.waiting{padding:12px;border:1px dashed #d7b55f;border-radius:14px;background:#fffaf0;margin-top:10px}.hide{display:none!important}input{width:100%;padding:11px;border:1px solid #cfd8e6;border-radius:12px;font:inherit}
-.expand-mode .workspace{grid-template-columns:1fr}.expand-mode .side{display:none}.expand-mode .video-stage{min-height:70vh}.video-stage:fullscreen{width:100vw;height:100vh;border-radius:0}.video-stage:fullscreen .video-box{height:100vh}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.toolbar button{flex:1 1 145px}.toolbar .wide{flex:2 1 220px}button,.file-btn{border:0;border-radius:12px;padding:11px 13px;font-weight:850;cursor:pointer;background:var(--navy);color:#fff;text-align:center}button.gold,.file-btn.gold{background:var(--gold);color:#17233e}button.ghost,.file-btn.ghost{background:#eaf0f7;color:#213b63}button.danger{background:var(--danger)}button:disabled{opacity:.5;cursor:not-allowed}
+.lesson-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}.lesson-tools button{padding:8px 10px;font-size:12px}.lesson{width:100%;min-height:260px;resize:vertical;border:1px solid var(--line);border-radius:14px;padding:14px;font:inherit;line-height:1.55;background:#fbfcfe;color:var(--ink);outline:none}.lesson:focus{border-color:#8ca9d0;box-shadow:0 0 0 3px #dbeafe}
+.materials{margin-top:14px;border-top:1px solid var(--line);padding-top:14px}.material-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.material-actions input{display:none}.material-preview{margin-top:10px;min-height:130px;border:1px dashed #cfd8e6;border-radius:14px;background:#f8fafc;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.material-preview img,.material-preview video,.material-preview iframe{display:block;width:100%;max-height:360px;border:0;background:#111}.material-preview img{object-fit:contain;background:#f8fafc}.material-preview iframe{height:360px}.material-empty{padding:20px;text-align:center;color:var(--muted);font-size:13px}.file-card{padding:18px;text-align:center}.file-card strong{display:block;margin-bottom:6px}.material-meta{font-size:12px;color:var(--muted);margin-top:8px}.material-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.material-controls button{flex:1 1 135px;padding:9px 10px;font-size:12px}
+.chat{height:210px;overflow:auto;background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:8px}.msg{padding:8px 10px;margin:6px 0;border-radius:11px;background:#fff;border:1px solid #e5e7eb}.msg b{font-size:12px;color:#43516a}.chat-row{display:flex;gap:8px}.chat-row input{flex:1}.waiting{padding:12px;border:1px dashed #d7b55f;border-radius:14px;background:#fffaf0;margin-top:10px}.hide{display:none!important}input{width:100%;padding:11px;border:1px solid #cfd8e6;border-radius:12px;font:inherit}
+.expand-mode .workspace{grid-template-columns:1fr}.expand-mode .side{display:none}.expand-mode .video-stage{min-height:70vh}.video-stage:fullscreen{width:100vw;height:100vh;border-radius:0}.video-stage:fullscreen .video-box{height:100vh}.material-preview:fullscreen{background:#111;width:100vw;height:100vh;border:0;border-radius:0}.material-preview:fullscreen img,.material-preview:fullscreen video,.material-preview:fullscreen iframe{width:100%;height:100%;max-height:none;object-fit:contain}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;background:#eef4fb;color:#365a88;font-size:12px;font-weight:700}.section-head{display:flex;justify-content:space-between;gap:10px;align-items:center}
-@media(max-width:900px){.workspace{grid-template-columns:1fr}.video-stage{min-height:300px;grid-template-columns:1fr}.side{order:2}.wrap{padding:8px}.lesson{min-height:220px}}
+@media(max-width:900px){.workspace{grid-template-columns:1fr}.video-stage{min-height:300px;grid-template-columns:1fr}.side{order:2}.wrap{padding:8px}.lesson{min-height:220px}.material-actions{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -34,7 +35,7 @@
         <div class="toolbar">
           <button id="toggleMic" class="ghost">🎤 Microfone ligado</button>
           <button id="toggleCam" class="ghost">📷 Câmera ligada</button>
-          <button id="shareScreen" class="ghost">🖥️ Compartilhar tela</button>
+          <button id="shareScreen" class="ghost">🖥️ Compartilhar tela/áudio</button>
           <button id="fullscreen" class="ghost">⛶ Tela cheia</button>
           <button id="expand" class="ghost">↔ Expandir área</button>
           <button id="hangup" class="danger">Encerrar</button>
@@ -46,8 +47,27 @@
 
     <aside class="card side">
       <div class="section-head"><h3 style="margin:0">Lição compartilhada</h3><span class="pill" id="saveState">Sincronizada</span></div>
-      <div class="lesson-tools"><button id="clearLesson" class="ghost">Limpar</button><button id="insertExercise" class="ghost">+ Exercício</button><button id="insertHomework" class="ghost">+ Homework</button></div>
+      <div class="lesson-tools"><button id="clearLesson" class="ghost">Limpar texto</button><button id="insertExercise" class="ghost">+ Exercício</button><button id="insertHomework" class="ghost">+ Homework</button></div>
       <textarea id="lesson" class="lesson" placeholder="Digite aqui a lição, frases, perguntas, vocabulário ou exercícios. O texto aparece nos dois aparelhos em tempo real."></textarea>
+
+      <div class="materials" id="materialsBlock">
+        <div class="section-head"><h3 style="margin:0">Material da aula</h3><span class="pill" id="materialType">Nenhum</span></div>
+        <div class="muted" style="margin:6px 0 10px">Envie PDF, imagem, TXT/DOCX ou vídeo. O material fica neste aparelho; para o aluno ver, use “Apresentar material”.</div>
+        <div class="material-actions" id="teacherMaterialActions">
+          <label class="file-btn ghost" for="lessonFile">📄 Upload da lição</label>
+          <input id="lessonFile" type="file" accept=".pdf,.txt,.doc,.docx,.jpg,.jpeg,.png,.webp,application/pdf,text/plain,image/*,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+          <label class="file-btn ghost" for="videoFile">🎬 Upload de vídeo</label>
+          <input id="videoFile" type="file" accept="video/mp4,video/webm,video/quicktime,video/*">
+        </div>
+        <div class="material-preview" id="materialPreview"><div class="material-empty">Nenhum material carregado.</div></div>
+        <div class="material-meta" id="materialMeta"></div>
+        <div class="material-controls">
+          <button id="presentMaterial" class="gold">▶ Apresentar material</button>
+          <button id="materialFullscreen" class="ghost">⛶ Material em tela cheia</button>
+          <button id="removeMaterial" class="ghost">Remover material</button>
+        </div>
+      </div>
+
       <h3 style="margin-top:16px">Comentários</h3>
       <div id="chat" class="chat"></div>
       <div class="chat-row"><input id="chatInput" placeholder="Escreva um comentário..."><button id="sendChat">Enviar</button></div>
@@ -57,45 +77,541 @@
 <script>
 const $=id=>document.getElementById(id), params=new URLSearchParams(location.search);
 let room=params.get('sala'), host=params.get('host'), role=host?'teacher':'student';
-let ws,pc,localStream,pendingStudentId=null,iceServers=[],screenTrack=null,lessonTimer=null;
+let ws,pc,localStream,pendingStudentId=null,iceServers=[],screenTrack=null,screenAudioTrack=null,lessonTimer=null,materialUrl=null;
 const rolePill=$('rolePill'); rolePill.textContent=role==='teacher'?'Professor':'Aluno';
+
 function setStatus(text,kind=''){const s=$('status');s.textContent=text;s.className='status '+kind}
 function randomHex(bytes=16){const a=new Uint8Array(bytes);crypto.getRandomValues(a);return [...a].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function wsUrl(){const u=new URL('/api/ws',location.href);u.protocol=location.protocol==='https:'?'wss:':'ws:';u.searchParams.set('room',room);u.searchParams.set('role',role);if(host)u.searchParams.set('host',host);return u.toString()}
-async function getTurn(){const r=await fetch('/api/turn',{cache:'no-store'});if(!r.ok)throw new Error('TURN '+r.status);const d=await r.json();iceServers=d.iceServers||d;if(!Array.isArray(iceServers))throw new Error('Resposta TURN inválida')}
-async function getMedia(){if(localStream)return localStream;localStream=await navigator.mediaDevices.getUserMedia({video:{width:{ideal:1280},height:{ideal:720}},audio:{echoCancellation:true,noiseSuppression:true}});$('localVideo').srcObject=localStream;return localStream}
-async function makePeer(){if(pc)pc.close();pc=new RTCPeerConnection({iceServers});const stream=await getMedia();for(const t of stream.getTracks())pc.addTrack(t,stream);pc.ontrack=e=>{$('remoteVideo').srcObject=e.streams[0];setStatus('Conectado. Aula ao vivo em andamento.','ok')};pc.onicecandidate=e=>{if(e.candidate)sendSignal({candidate:e.candidate})};pc.onconnectionstatechange=()=>{if(pc.connectionState==='failed')setStatus('A conexão falhou. Tentando pelo TURN...','warn');if(pc.connectionState==='disconnected')setStatus('Conexão interrompida temporariamente.','warn')};return pc}
-function send(obj){if(ws?.readyState===1)ws.send(JSON.stringify(obj))} function sendSignal(data){send({type:'signal',data})}
-async function startOffer(){await makePeer();const offer=await pc.createOffer();await pc.setLocalDescription(offer);sendSignal({description:pc.localDescription})}
-async function handleSignal(data){if(data.description){if(!pc)await makePeer();await pc.setRemoteDescription(data.description);if(data.description.type==='offer'){const answer=await pc.createAnswer();await pc.setLocalDescription(answer);sendSignal({description:pc.localDescription})}}else if(data.candidate){if(!pc)await makePeer();try{await pc.addIceCandidate(data.candidate)}catch(e){console.warn(e)}}}
-function addChat(text,who){const d=document.createElement('div');d.className='msg';d.innerHTML=`<b>${who}</b><div></div>`;d.querySelector('div').textContent=text;$('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight}
-function connectSocket(){return new Promise((resolve,reject)=>{ws=new WebSocket(wsUrl());ws.onopen=resolve;ws.onerror=reject;ws.onmessage=async e=>{let m;try{m=JSON.parse(e.data)}catch{return}
- if(m.type==='student-waiting'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.remove('hide');setStatus('Aluno solicitou entrada.','warn')}
- if(m.type==='approved'&&role==='student')setStatus('Entrada autorizada. Conectando...','ok');
- if(m.type==='approved-confirmed'&&role==='teacher'){pendingStudentId=m.studentId;$('approvalBox').classList.add('hide');setStatus('Aluno aprovado. Iniciando vídeo...','ok');await startOffer()}
- if(m.type==='signal')await handleSignal(m.data);
- if(m.type==='waiting-teacher')setStatus('Aguardando o professor entrar na sala...','warn');
- if(m.type==='rejected')setStatus('Entrada não autorizada.','bad');
- if(m.type==='teacher-left')setStatus('O professor saiu da sala.','warn');
- if(m.type==='student-left')setStatus('O aluno saiu da sala.','warn');
- if(m.type==='lesson-state'||m.type==='lesson-update'){if(document.activeElement!==$('lesson'))$('lesson').value=m.text||'';$('saveState').textContent='Sincronizada'}
- if(m.type==='chat')addChat(m.text,m.role==='teacher'?'Professor':'Aluno');
- if(m.type==='error')setStatus(m.message||'Erro na sala.','bad');
-}})}
-async function enter(){try{$('joinPanel').classList.add('hide');$('roomPanel').classList.remove('hide');setStatus('Solicitando câmera e microfone...');await getMedia();setStatus('Obtendo conexão segura...');await getTurn();setStatus('Entrando na sala...');await connectSocket();if(role==='teacher'){const studentUrl=new URL(location.href);studentUrl.search='';studentUrl.searchParams.set('sala',room);$('inviteLink').value=studentUrl.toString();$('inviteBox').classList.remove('hide');$('remoteLabel').textContent='Aluno';setStatus('Sala pronta. Envie o link ao aluno.','ok')}else{$('remoteLabel').textContent='Professor';setStatus('Aguardando aprovação do professor...','warn')}}catch(e){console.error(e);setStatus('Não foi possível iniciar: '+e.message,'bad')}}
-$('createRoom').onclick=()=>{room=randomHex(16);host=randomHex(24);role='teacher';rolePill.textContent='Professor';const u=new URL(location.href);u.search='';u.searchParams.set('sala',room);u.searchParams.set('host',host);history.replaceState({},'',u);enter()};
-$('joinRoom').onclick=enter;$('approve').onclick=()=>pendingStudentId&&send({type:'approve',studentId:pendingStudentId});$('reject').onclick=()=>{if(pendingStudentId)send({type:'reject',studentId:pendingStudentId});$('approvalBox').classList.add('hide')};
-$('toggleMic').onclick=()=>{const t=localStream?.getAudioTracks()[0];if(!t)return;t.enabled=!t.enabled;$('toggleMic').textContent=t.enabled?'🎤 Microfone ligado':'🔇 Microfone desligado'};
-$('toggleCam').onclick=()=>{const t=localStream?.getVideoTracks()[0];if(!t)return;t.enabled=!t.enabled;$('toggleCam').textContent=t.enabled?'📷 Câmera ligada':'🚫 Câmera desligada'};
-$('fullscreen').onclick=async()=>{const el=$('videoStage');if(!document.fullscreenElement)await el.requestFullscreen();else await document.exitFullscreen()};
-$('expand').onclick=()=>{document.body.classList.toggle('expand-mode');$('expand').textContent=document.body.classList.contains('expand-mode')?'↩ Mostrar lição':'↔ Expandir área'};
-$('shareScreen').onclick=async()=>{try{if(screenTrack){screenTrack.stop();return}const ds=await navigator.mediaDevices.getDisplayMedia({video:true});screenTrack=ds.getVideoTracks()[0];const sender=pc?.getSenders().find(s=>s.track?.kind==='video');if(sender)await sender.replaceTrack(screenTrack);$('localVideo').srcObject=ds;$('shareScreen').textContent='🛑 Parar compartilhamento';screenTrack.onended=async()=>{const cam=localStream?.getVideoTracks()[0];const s=pc?.getSenders().find(x=>x.track?.kind==='video');if(s&&cam)await s.replaceTrack(cam);$('localVideo').srcObject=localStream;screenTrack=null;$('shareScreen').textContent='🖥️ Compartilhar tela'}}catch(e){console.warn(e)}};
-$('hangup').onclick=()=>{pc?.close();ws?.close();localStream?.getTracks().forEach(t=>t.stop());location.href=location.pathname};
-$('copyLink').onclick=async()=>{await navigator.clipboard.writeText($('inviteLink').value);$('copyLink').textContent='Copiado!';setTimeout(()=>$('copyLink').textContent='Copiar link',1200)};
-$('lesson').addEventListener('input',()=>{clearTimeout(lessonTimer);$('saveState').textContent='Salvando...';lessonTimer=setTimeout(()=>{send({type:'lesson-update',text:$('lesson').value});$('saveState').textContent='Sincronizada'},250)});
-$('clearLesson').onclick=()=>{$('lesson').value='';send({type:'lesson-update',text:''})};
-$('insertExercise').onclick=()=>{const t='\n\nEXERCISE\n1. \n2. \n3. ';$('lesson').value+=t;send({type:'lesson-update',text:$('lesson').value});$('lesson').focus()};
-$('insertHomework').onclick=()=>{const t='\n\nHOMEWORK\n• ';$('lesson').value+=t;send({type:'lesson-update',text:$('lesson').value});$('lesson').focus()};
-function sendChat(){const v=$('chatInput').value.trim();if(!v)return;send({type:'chat',text:v});$('chatInput').value=''}$('sendChat').onclick=sendChat;$('chatInput').addEventListener('keydown',e=>{if(e.key==='Enter')sendChat()});
-if(room&&!host){$('teacherStart').classList.add('hide');$('studentStart').classList.remove('hide')}else if(room&&host){$('teacherStart').classList.add('hide');$('studentStart').classList.add('hide');enter()}
+
+async function getTurn(){
+  const r=await fetch('/api/turn',{cache:'no-store'});
+  if(!r.ok)throw new Error('TURN '+r.status);
+  const d=await r.json();
+  iceServers=d.iceServers||d;
+  if(!Array.isArray(iceServers))throw new Error('Resposta TURN inválida')
+}
+
+async function getMedia(){
+  if(localStream)return localStream;
+  localStream=await navigator.mediaDevices.getUserMedia({
+    video:{width:{ideal:1280},height:{ideal:720}},
+    audio:{echoCancellation:true,noiseSuppression:true}
+  });
+  $('localVideo').srcObject=localStream;
+  return localStream
+}
+
+async function makePeer(){
+  if(pc)pc.close();
+  pc=new RTCPeerConnection({iceServers});
+  const stream=await getMedia();
+
+  for(const t of stream.getTracks())pc.addTrack(t,stream);
+
+  pc.ontrack=e=>{
+    $('remoteVideo').srcObject=e.streams[0];
+    setStatus('Conectado. Aula ao vivo em andamento.','ok')
+  };
+
+  pc.onicecandidate=e=>{
+    if(e.candidate)sendSignal({candidate:e.candidate})
+  };
+
+  pc.onconnectionstatechange=()=>{
+    if(pc.connectionState==='failed')setStatus('A conexão falhou. Tentando pelo TURN...','warn');
+    if(pc.connectionState==='disconnected')setStatus('Conexão interrompida temporariamente.','warn')
+  };
+
+  return pc
+}
+
+function send(obj){
+  if(ws?.readyState===1)ws.send(JSON.stringify(obj))
+}
+
+function sendSignal(data){
+  send({type:'signal',data})
+}
+
+async function startOffer(){
+  await makePeer();
+  const offer=await pc.createOffer();
+  await pc.setLocalDescription(offer);
+  sendSignal({description:pc.localDescription})
+}
+
+async function handleSignal(data){
+  if(data.description){
+    if(!pc)await makePeer();
+    await pc.setRemoteDescription(data.description);
+
+    if(data.description.type==='offer'){
+      const answer=await pc.createAnswer();
+      await pc.setLocalDescription(answer);
+      sendSignal({description:pc.localDescription})
+    }
+  }else if(data.candidate){
+    if(!pc)await makePeer();
+
+    try{
+      await pc.addIceCandidate(data.candidate)
+    }catch(e){
+      console.warn(e)
+    }
+  }
+}
+
+function addChat(text,who){
+  const d=document.createElement('div');
+  d.className='msg';
+  d.innerHTML=`<b>${who}</b><div></div>`;
+  d.querySelector('div').textContent=text;
+  $('chat').appendChild(d);
+  $('chat').scrollTop=$('chat').scrollHeight
+}
+
+function connectSocket(){
+  return new Promise((resolve,reject)=>{
+    ws=new WebSocket(wsUrl());
+
+    ws.onopen=resolve;
+    ws.onerror=reject;
+
+    ws.onmessage=async e=>{
+      let m;
+
+      try{
+        m=JSON.parse(e.data)
+      }catch{
+        return
+      }
+
+      if(m.type==='student-waiting'&&role==='teacher'){
+        pendingStudentId=m.studentId;
+        $('approvalBox').classList.remove('hide');
+        setStatus('Aluno solicitou entrada.','warn')
+      }
+
+      if(m.type==='approved'&&role==='student'){
+        setStatus('Entrada autorizada. Conectando...','ok')
+      }
+
+      if(m.type==='approved-confirmed'&&role==='teacher'){
+        pendingStudentId=m.studentId;
+        $('approvalBox').classList.add('hide');
+        setStatus('Aluno aprovado. Iniciando vídeo...','ok');
+        await startOffer()
+      }
+
+      if(m.type==='signal')await handleSignal(m.data);
+
+      if(m.type==='waiting-teacher'){
+        setStatus('Aguardando o professor entrar na sala...','warn')
+      }
+
+      if(m.type==='rejected'){
+        setStatus('Entrada não autorizada.','bad')
+      }
+
+      if(m.type==='teacher-left'){
+        setStatus('O professor saiu da sala.','warn')
+      }
+
+      if(m.type==='student-left'){
+        setStatus('O aluno saiu da sala.','warn')
+      }
+
+      if(m.type==='lesson-state'||m.type==='lesson-update'){
+        if(document.activeElement!==$('lesson'))$('lesson').value=m.text||'';
+        $('saveState').textContent='Sincronizada'
+      }
+
+      if(m.type==='chat'){
+        addChat(m.text,m.role==='teacher'?'Professor':'Aluno')
+      }
+
+      if(m.type==='error'){
+        setStatus(m.message||'Erro na sala.','bad')
+      }
+    }
+  })
+}
+
+async function enter(){
+  try{
+    $('joinPanel').classList.add('hide');
+    $('roomPanel').classList.remove('hide');
+
+    setStatus('Solicitando câmera e microfone...');
+    await getMedia();
+
+    setStatus('Obtendo conexão segura...');
+    await getTurn();
+
+    setStatus('Entrando na sala...');
+    await connectSocket();
+
+    if(role==='teacher'){
+      const studentUrl=new URL(location.href);
+      studentUrl.search='';
+      studentUrl.searchParams.set('sala',room);
+
+      $('inviteLink').value=studentUrl.toString();
+      $('inviteBox').classList.remove('hide');
+      $('remoteLabel').textContent='Aluno';
+
+      setStatus('Sala pronta. Envie o link ao aluno.','ok')
+    }else{
+      $('remoteLabel').textContent='Professor';
+      setStatus('Aguardando aprovação do professor...','warn')
+    }
+  }catch(e){
+    console.error(e);
+    setStatus('Não foi possível iniciar: '+e.message,'bad')
+  }
+}
+
+$('createRoom').onclick=()=>{
+  room=randomHex(16);
+  host=randomHex(24);
+  role='teacher';
+
+  rolePill.textContent='Professor';
+
+  const u=new URL(location.href);
+  u.search='';
+  u.searchParams.set('sala',room);
+  u.searchParams.set('host',host);
+
+  history.replaceState({},'',u);
+  enter()
+};
+
+$('joinRoom').onclick=enter;
+
+$('approve').onclick=()=>{
+  if(pendingStudentId)send({
+    type:'approve',
+    studentId:pendingStudentId
+  })
+};
+
+$('reject').onclick=()=>{
+  if(pendingStudentId)send({
+    type:'reject',
+    studentId:pendingStudentId
+  });
+
+  $('approvalBox').classList.add('hide')
+};
+
+$('toggleMic').onclick=()=>{
+  const t=localStream?.getAudioTracks()[0];
+
+  if(!t)return;
+
+  t.enabled=!t.enabled;
+
+  $('toggleMic').textContent=t.enabled
+    ?'🎤 Microfone ligado'
+    :'🔇 Microfone desligado'
+};
+
+$('toggleCam').onclick=()=>{
+  const t=localStream?.getVideoTracks()[0];
+
+  if(!t)return;
+
+  t.enabled=!t.enabled;
+
+  $('toggleCam').textContent=t.enabled
+    ?'📷 Câmera ligada'
+    :'🚫 Câmera desligada'
+};
+
+$('fullscreen').onclick=async()=>{
+  const el=$('videoStage');
+
+  if(!document.fullscreenElement){
+    await el.requestFullscreen()
+  }else{
+    await document.exitFullscreen()
+  }
+};
+
+$('expand').onclick=()=>{
+  document.body.classList.toggle('expand-mode');
+
+  $('expand').textContent=document.body.classList.contains('expand-mode')
+    ?'↩ Mostrar lição'
+    :'↔ Expandir área'
+};
+
+async function stopScreenShare(){
+  const cam=localStream?.getVideoTracks()[0];
+  const mic=localStream?.getAudioTracks()[0];
+
+  const vs=pc?.getSenders().find(s=>s.track?.kind==='video');
+  const as=pc?.getSenders().find(s=>s.track?.kind==='audio');
+
+  if(vs&&cam)await vs.replaceTrack(cam);
+
+  if(as&&mic&&screenAudioTrack){
+    await as.replaceTrack(mic)
+  }
+
+  $('localVideo').srcObject=localStream;
+
+  screenTrack=null;
+  screenAudioTrack=null;
+
+  $('shareScreen').textContent='🖥️ Compartilhar tela/áudio'
+}
+
+async function toggleScreenShare(){
+  try{
+    if(screenTrack){
+      screenTrack.stop();
+      return
+    }
+
+    const ds=await navigator.mediaDevices.getDisplayMedia({
+      video:true,
+      audio:true
+    });
+
+    screenTrack=ds.getVideoTracks()[0];
+    screenAudioTrack=ds.getAudioTracks()[0]||null;
+
+    const vs=pc?.getSenders().find(s=>s.track?.kind==='video');
+    const as=pc?.getSenders().find(s=>s.track?.kind==='audio');
+
+    if(vs)await vs.replaceTrack(screenTrack);
+
+    if(as&&screenAudioTrack){
+      await as.replaceTrack(screenAudioTrack)
+    }
+
+    $('localVideo').srcObject=ds;
+    $('shareScreen').textContent='🛑 Parar compartilhamento';
+
+    screenTrack.onended=stopScreenShare
+  }catch(e){
+    console.warn(e);
+    setStatus('Compartilhamento cancelado ou não disponível.','warn')
+  }
+}
+
+$('shareScreen').onclick=toggleScreenShare;
+
+$('hangup').onclick=()=>{
+  pc?.close();
+  ws?.close();
+  localStream?.getTracks().forEach(t=>t.stop());
+  screenTrack?.stop();
+  location.href=location.pathname
+};
+
+$('copyLink').onclick=async()=>{
+  await navigator.clipboard.writeText($('inviteLink').value);
+
+  $('copyLink').textContent='Copiado!';
+
+  setTimeout(
+    ()=>$('copyLink').textContent='Copiar link',
+    1200
+  )
+};
+
+$('lesson').addEventListener('input',()=>{
+  clearTimeout(lessonTimer);
+
+  $('saveState').textContent='Salvando...';
+
+  lessonTimer=setTimeout(()=>{
+    send({
+      type:'lesson-update',
+      text:$('lesson').value
+    });
+
+    $('saveState').textContent='Sincronizada'
+  },250)
+});
+
+$('clearLesson').onclick=()=>{
+  $('lesson').value='';
+
+  send({
+    type:'lesson-update',
+    text:''
+  })
+};
+
+$('insertExercise').onclick=()=>{
+  const t='\n\nEXERCISE\n1. \n2. \n3. ';
+
+  $('lesson').value+=t;
+
+  send({
+    type:'lesson-update',
+    text:$('lesson').value
+  });
+
+  $('lesson').focus()
+};
+
+$('insertHomework').onclick=()=>{
+  const t='\n\nHOMEWORK\n• ';
+
+  $('lesson').value+=t;
+
+  send({
+    type:'lesson-update',
+    text:$('lesson').value
+  });
+
+  $('lesson').focus()
+};
+
+function sendChat(){
+  const v=$('chatInput').value.trim();
+
+  if(!v)return;
+
+  send({
+    type:'chat',
+    text:v
+  });
+
+  $('chatInput').value=''
+}
+
+$('sendChat').onclick=sendChat;
+
+$('chatInput').addEventListener('keydown',e=>{
+  if(e.key==='Enter')sendChat()
+});
+
+function clearMaterial(){
+  if(materialUrl){
+    URL.revokeObjectURL(materialUrl);
+    materialUrl=null
+  }
+
+  $('materialPreview').innerHTML=
+    '<div class="material-empty">Nenhum material carregado.</div>';
+
+  $('materialMeta').textContent='';
+  $('materialType').textContent='Nenhum';
+  $('lessonFile').value='';
+  $('videoFile').value=''
+}
+
+function setMaterialMeta(file,label){
+  $('materialType').textContent=label;
+
+  $('materialMeta').textContent=
+    `${file.name} · ${(file.size/1048576).toFixed(1)} MB`
+}
+
+$('lessonFile').addEventListener('change',async e=>{
+  const file=e.target.files?.[0];
+
+  if(!file)return;
+
+  clearMaterial();
+
+  materialUrl=URL.createObjectURL(file);
+
+  setMaterialMeta(file,'Lição');
+
+  const p=$('materialPreview');
+
+  if(
+    file.type==='text/plain'||
+    file.name.toLowerCase().endsWith('.txt')
+  ){
+    const text=await file.text();
+
+    $('lesson').value=text;
+
+    send({
+      type:'lesson-update',
+      text
+    });
+
+    p.innerHTML=
+      '<div class="file-card"><strong>TXT importado para a lição</strong><span class="muted">O conteúdo também foi sincronizado no campo de texto.</span></div>';
+
+  }else if(file.type.startsWith('image/')){
+
+    p.innerHTML=
+      `<img alt="Material da aula" src="${materialUrl}">`;
+
+  }else if(
+    file.type==='application/pdf'||
+    file.name.toLowerCase().endsWith('.pdf')
+  ){
+
+    p.innerHTML=
+      `<iframe title="PDF da aula" src="${materialUrl}"></iframe>`;
+
+  }else{
+
+    p.innerHTML=
+      '<div class="file-card"><strong>Arquivo carregado</strong><span class="muted">Este formato não tem prévia nativa no navegador. Use “Apresentar material” ou abra o arquivo no seu computador.</span></div>'
+  }
+});
+
+$('videoFile').addEventListener('change',e=>{
+  const file=e.target.files?.[0];
+
+  if(!file)return;
+
+  clearMaterial();
+
+  materialUrl=URL.createObjectURL(file);
+
+  setMaterialMeta(file,'Vídeo');
+
+  $('materialPreview').innerHTML=
+    `<video id="lessonVideo" controls playsinline preload="metadata" src="${materialUrl}"></video>`
+});
+
+$('removeMaterial').onclick=clearMaterial;
+
+$('materialFullscreen').onclick=async()=>{
+  const el=$('materialPreview');
+
+  if(!document.fullscreenElement){
+    await el.requestFullscreen()
+  }else{
+    await document.exitFullscreen()
+  }
+};
+
+$('presentMaterial').onclick=async()=>{
+  setStatus(
+    'Escolha esta aba/janela na caixa de compartilhamento. Se for vídeo, marque também “Compartilhar áudio da guia”.',
+    'warn'
+  );
+
+  await toggleScreenShare()
+};
+
+if(role==='student'){
+  $('teacherMaterialActions').classList.add('hide')
+}
+
+if(room&&!host){
+  $('teacherStart').classList.add('hide');
+  $('studentStart').classList.remove('hide')
+}else if(room&&host){
+  $('teacherStart').classList.add('hide');
+  $('studentStart').classList.add('hide');
+  enter()
+}
 </script>
+</body>
+</html>
